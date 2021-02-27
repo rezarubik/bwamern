@@ -116,7 +116,7 @@ section {
     right: 0;
     color: $white;
     min-height: 30px;
-    border-bottom: 0 15px;
+    border-radius: 0 15px;
     // * span
     .span {
       font-weight: 300; //* sama seperti 300 light
@@ -152,6 +152,7 @@ section {
     overflow: hidden;
     cursor: pointer;
     height: 100%;
+    border-radius: 15px;
     &:after {
       position: absolute;
       content: "";
@@ -173,7 +174,6 @@ section {
       bottom: 0;
       transform: scale(1.1);
       transition: 0.25s transform ease-in-out;
-      border-radius: $border-radius;
     }
     .meta-wrapper {
       z-index: 4;
@@ -184,6 +184,21 @@ section {
       bottom: 0;
       width: 100%;
       transform: translateY(0);
+      transition: 0.3s transform ease-in-out;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+    }
+    &:hover {
+      .meta-wrapper {
+        transform: translateY(-10px);
+      }
+      &:after {
+        transform: scale(1);
+      }
+      .img-wrapper {
+        transform: scale(1);
+      }
     }
   }
   // * end card-feautured
